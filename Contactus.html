@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./contactus.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="./TLanding.html">
+            <img src="./image/logo.png" alt="TricyCall Logo">
+        </a>
+        </div>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./Contactus.html">Contact</a></li>
+            <li><a href="./Tlogin.html">Login</a></li>
+        </ul>
+    </nav>
+    <section class="section gray-bg" id="contactus">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2>Get In Touch with <span class="text-tricy">TricyCall</span></h2>
+                        <p>The TricyCall is a web application which is primarily for tricycle booking. It aims to revolutionize tricycle transportation in Naga City.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-row-reverse">
+                <div class="col-md-7 col-lg-8 m-15px-tb">
+                    <div class="contact-form">
+                        <form action="/" method="post" class="contactform contact_form" id="contact_form">
+                            <div class="returnmessage valid-feedback p-15px-b" data-success="Your message has been received, We will contact you soon."></div>
+                            <div class="empty_notice invalid-feedback p-15px-b"><span>Please Fill Required Fields</span></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input id="name" type="text" placeholder="Full Name" class="form-control"> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input id="email" type="text" placeholder="Email Address" class="form-control">  
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input id="subject" type="text" placeholder="Subject" class="form-control"> 
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message-input" name="message" placeholder="Enter your message"></textarea>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="send">
+                                        <a id="send_message" class="px-btn theme" href="#"><span>Submit</span> <i class="arrow"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </html>

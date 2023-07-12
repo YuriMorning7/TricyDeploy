@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./Tlogin-style.css">
+    <link rel="icon" href="./image/homelogo.png" sizes="200x200">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="./TLanding.html">
+            <img src="./image/logo.png" alt="TricyCall Logo">
+        </a>
+        </div>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./Contactus.html">Contact</a></li>
+            <li><a href="./Tlogin.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-div">
+        <div class="title">TricyCall</div>
+        <img src="./image/homelogo.png" alt="TricyCall Logo" class="logo">
+        <div class="login-in">
+            <div class="username">
+                <i class="lni lni-user"></i>
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="password">
+                <i class="lni lni-lock"></i>
+                <input type="password" placeholder="Password">
+            </div>
+        </div>
+        <button class="buttons" id="google-signin-button">Login with Google</button>
+        <div class="link">
+            <a href="Forgot.html">Forgotten password</a> or
+            <a href="Sign_Up.html">Sign up</a>
+        </div>
+    </div>
+</body>
+<script>
+    function onGoogleSignIn(googleUser) {
+      // Retrieve the user's ID token and basic profile information
+      const idToken = googleUser.getAuthResponse().id_token;
+      const profile = googleUser.getBasicProfile();
+      
+      // You can access the user's information as follows:
+      console.log('ID token: ' + idToken);
+      console.log('Full Name: ' + profile.getName());
+      console.log('Email: ' + profile.getEmail());
+  
+      // Perform additional actions or send the token to your server for verification
+      // ...
+    }
+  
+    function initializeGoogleSignIn() {
+      gapi.load('auth2', function() {
+        gapi.auth2.init({
+          client_id: '929183577138-9t0jr5ucqca8513fskh4mmudscht9ehs.apps.googleusercontent.com',
+        }).then(function(auth2) {
+          const googleSignInButton = document.getElementById('google-signin-button');
+          auth2.attachClickHandler(googleSignInButton, {}, onGoogleSignIn, function(error) {
+            console.error('Google Sign-In Error:', error);
+          });
+        });
+      });
+    }
+  
+    // Initialize Google Sign-In on window load
+    window.onload = function() {
+      initializeGoogleSignIn();
+    };
+  </script>
+  
+</html>
